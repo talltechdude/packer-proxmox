@@ -2,3 +2,6 @@ config.json
 .env
 */http/*
 */packer_cache
+*/playbook/logs
+*/playbook/roles
+*.retry

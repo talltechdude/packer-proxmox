@@ -14,6 +14,8 @@ http/preseed.cfg:
 
 .PHONY: build
 build: http/preseed.cfg
+	mkdir -p playbook/logs
+	ansible-galaxy install --force -p playbook/roles -r playbook/requirements.yml
 	packer build --var-file config.json debian-10.json
 
 all: http/preseed.cfg build

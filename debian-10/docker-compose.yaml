@@ -1,0 +1,8 @@
+version: "3"
+services:
+  packer:
+    container_name: packer
+    build: .
+    volumes:
+    - ./:/build
+    network_mode: host

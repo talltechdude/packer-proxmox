@@ -11,9 +11,9 @@ d-i keyboard-configuration/xkb-keymap select us
 
 ### Mirror settings
 d-i mirror/country string manual
-d-i mirror/http/hostname string http.us.debian.org
+d-i mirror/http/hostname string mirror.aarnet.edu.au
 d-i mirror/http/directory string /debian
-d-i mirror/http/proxy string
+d-i mirror/http/proxy string {{ env("apt_cache") }}
 
 ### Clock and time zone setup
 # Controls whether or not the hardware clock is set to UTC.
