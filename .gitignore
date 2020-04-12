@@ -1,0 +1,4 @@
+config.json
+.env
+*/http/*
+*/packer_cache
